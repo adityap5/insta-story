@@ -27,7 +27,7 @@ body{
     width: 100%;
     background-color: #fff;
 border-bottom: 1px solid #dadada;
-padding: 15px;
+padding: 15px 0;
 white-space: nowrap;
 overflow-x: auto;
 overflow-y: hidden;
@@ -43,7 +43,7 @@ overflow-y: hidden;
     border: 2px solid red;
     overflow: hidden;
     display: inline-block;
-
+    margin: 3px;
 }
 .story img{
     height: 100px; 
