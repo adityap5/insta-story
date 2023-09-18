@@ -18,20 +18,29 @@ body{
   position: relative;
     height:600px;
     width: 400px;
-    background-color: #e0a96d;
+    background-color: white;
     border-radius: 13px;
+overflow: hidden;
 }
 .stories{
-
     height: 130px;
     width: 100%;
     background-color: #fff;
-border-bottom: 1px solid #dadada;
-padding: 15px 0;
-white-space: nowrap;
-overflow-x: auto;
-overflow-y: hidden;
-
+    border-bottom: 1px solid #dadada;
+    padding: 15px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  
+}
+.fullscreen{
+position: absolute;
+display: none;
+    height: 100%;
+    width: 100%;
+   background-size:cover ;
+   background-position: center;
+   border-radius: 13px;
 }
 .stories::-webkit-scrollbar{
     display: none;

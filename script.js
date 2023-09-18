@@ -42,14 +42,23 @@ var arr = [
     story:"https://plus.unsplash.com/premium_photo-1677185630234-2939126ae86b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzl8fG1vZGVsc3xlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
   }
 ];
-
+var stories = document.querySelector(".stories");
 var clutter ="";
 arr.forEach(function(elm,indx){
  clutter += `<div class="story">
- <img src="${elm.dp}" alt="">
+ <img id="${indx}" src="${elm.dp}" alt="">
 </div>`
 
 
 });
 
-document.querySelector(".stories").innerHTML= clutter;
+stories.innerHTML= clutter;
+
+stories.addEventListener("click",function(dets){
+  document.querySelector(".fullscreen").style.display="block";
+  document.querySelector(".fullscreen").style.backgroundImage=`url(${arr[dets.target.id].story})`
+  setTimeout(function(){
+  document.querySelector(".fullscreen").style.display="none";
+    
+  }, 3000);
+})
